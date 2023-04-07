@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+      <meta charset="UTF-8">
+      <style>
+         body {
+         background-image: url('/static/img/background.jpg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         width: auto;
+         }
+      </style>
+   <body style="background-color: #1f191a">
+      <title>{% block title %} {% endblock %} </title>
+      </head>
+      <div class="container">
+         <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+            <div/>
+               <a class = "dropdown-item" id = "items" href='/graphcall'>Call Microsoft Graph API</a>
+            </div>
+            <li class = "nav-item " id="link4">
+               <a class = "nav-link" href="/logout"> Logout </a>
+            </li>
+            </li>
+            </ul>
+         </nav>
+         <br>
+         <h2 style="color: blue">Welcome {{ user.get("name") }}!</h2>
+      </div>
+   </body>
+   {% block body %} {% endblock %}
